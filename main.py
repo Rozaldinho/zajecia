@@ -6,10 +6,8 @@ from flask_restful import Resource, Api
 hog = cv2.HOGDescriptor()
 hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
 
-
 app = Flask(__name__)
 api = Api(app)
-
 
 class PeopleCounter(Resource):
     def get(self):
